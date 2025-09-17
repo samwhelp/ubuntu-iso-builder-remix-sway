@@ -1,7 +1,7 @@
 
-# sway-config
+# Sway / Config
+
 
 ## Config File Path
 
 * [~/.config/sway/config](config)
-* [~/.config/sway/autostart](autostart)

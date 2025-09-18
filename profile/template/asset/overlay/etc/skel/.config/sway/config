@@ -227,14 +227,15 @@ gaps outer 0
 ### Head: Keybind / Application / Favorite
 ##
 
-## Launch File Manager (pcmanfm-qt)
-## Alt + Shift + f
-bindsym Mod1+Shift+f exec pcmanfm-qt
-
 
 ## Launch File Manager (thunar)
+## Alt + Shift + f
+bindsym Mod1+Shift+f exec thunar
+
+
+## Launch File Manager (pcmanfm)
 ## Alt + Shift + g
-bindsym Mod1+Shift+g exec thunar
+bindsym Mod1+Shift+g exec pcmanfm
 
 
 ## Launch Text Editor (mousepad)
@@ -244,7 +245,13 @@ bindsym Mod1+Shift+e exec mousepad
 
 ## Launch Web Browser (firefox)
 ## Alt + Shift + b
-bindsym Mod1+Shift+b exec firefox
+bindsym Mod1+Shift+b exec firefox --new-tab about:blank
+
+
+## Launch Appearance Settings (nwg-look)
+## Alt + Shift + s
+bindsym Mod1+Shift+s exec nwg-look
+
 
 ##
 ### Tail: Keybind / Application / Favorite
@@ -271,14 +278,15 @@ bindsym Mod1+Shift+a exec sakura
 bindsym Mod1+Ctrl+a exec xfce4-terminal
 
 
-## Launch foot
-## Alt + Shift + t
-bindsym Mod1+Shift+t exec foot
-
-
 ## Launch kitty
+## Alt + Shift + t
+bindsym Mod1+Shift+t exec kitty
+
+
+## Launch foot
 ## Alt + Ctrl + t
-bindsym Mod1+Ctrl+t exec kitty
+bindsym Mod1+Ctrl+t exec foot
+
 
 ##
 ### Tail: Keybind / Application / Terminal
@@ -439,20 +447,48 @@ bindsym Mod4+w layout toggle tabbed split
 
 
 ################################################################################
-### Head: Keybind / Screenshot
+### Head: Keybind / Screenshot / ViaGrimshot
 ##
 
-## Screenshot
-## Print
-#bindsym Print exec --no-startup-id scrot
-
-
-## Screenshot Selected Area
-## Alt + Print
-#bindsym Mod1+Print exec --no-startup-id scrot -s
 
 ##
-### Tail: Keybind / Screenshot
+## ## Screenshot
+##
+## `Print`
+##
+
+bindsym Print exec --no-startup-id grimshot save screen
+
+
+##
+## ## Screenshot Control
+##
+## `Alt + Print`
+##
+
+bindsym Mod1+Print exec --no-startup-id grimshot save anything
+
+
+##
+## ## Screenshot Current Window
+##
+## `Win + Print`
+##
+
+bindsym Mod4+Print exec --no-startup-id grimshot save active
+
+
+##
+## ## Screenshot Selected Area
+##
+## `Ctrl + Print`
+##
+
+bindsym Ctrl+Print exec --no-startup-id grimshot save area
+
+
+##
+### Tail: Keybind / Screenshot / ViaGrimshot
 ################################################################################
 
 
@@ -648,6 +684,7 @@ bindsym Mod4+Shift+q kill
 
 ## https://i3wm.org/docs/userguide.html#manipulating_layout
 
+
 ## Window toggle floating or tited
 ## Win + n
 bindsym Mod4+n floating toggle
@@ -656,6 +693,12 @@ bindsym Mod4+n floating toggle
 ## Window toggle floating or tited
 ## Win + `
 bindsym Mod4+grave floating toggle
+
+
+## Window toggle floating or tited
+## Win + Esc
+bindsym Mod4+Escape floating toggle
+
 
 ##
 ### Tail: Keybind / Window / FloatingToggle

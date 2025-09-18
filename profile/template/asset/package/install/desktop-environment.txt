@@ -17,11 +17,40 @@ sway
 xwayland
 
 
+swayidle
+swaylock
+
+
 swaybg
 hyprpaper
-#wf-shell
+wf-shell
 
 
+waybar
+
+
+wlogout
+
+
+wofi
+
+
+nwg-look
+
+
+mako-notifier
+
+
+policykit-1-gnome
+
+
+grimshot
+screengrab
+xfce4-screenshooter
+
+
+kitty
+foot
 xfce4-terminal
 
 

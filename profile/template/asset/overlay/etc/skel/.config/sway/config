@@ -1354,7 +1354,7 @@ for_window [app_id="mate-volume-control"] floating enable
 ### Head: Autostart / Wallpaper / azotebg
 ##
 
-exec ~/.azotebg
+#exec ~/.azotebg
 
 
 ##
